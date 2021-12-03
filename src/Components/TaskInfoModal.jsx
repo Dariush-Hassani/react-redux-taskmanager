@@ -27,12 +27,15 @@ const TaskInfoModal = () => {
   const [open, setOpen] = useState(false);
   const [task, setTask] = useState();
 
+  //redux
   const dispatch = useDispatch();
   const modalState = useSelector((state) => state.TaskInfoModal);
   const tasks = useSelector((state) => state.tasks.tasks);
 
+  //Priority Info
   const priority = PriorityEnum.find((x) => x.id === task?.priority);
 
+  //Modal Actions
   const openDialog = () => {
     setOpen(true);
   };
@@ -56,6 +59,7 @@ const TaskInfoModal = () => {
     closeDialog();
   };
 
+  //Effects
   useEffect(() => {
     if (modalState.isOpen) {
       openDialog();

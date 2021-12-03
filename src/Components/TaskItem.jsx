@@ -17,6 +17,7 @@ import {
 } from "./_StyledComponents";
 
 const TaskItem = ({ task, haveActions }) => {
+  //Priority Info
   const priority = PriorityEnum.find((x) => x.id === task.priority);
 
   const dispatch = useDispatch();
