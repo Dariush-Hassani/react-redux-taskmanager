@@ -2,6 +2,7 @@ const openModalForCreate = () => {
   return {
     type: "createEditModal/openCreate",
   };
+  
 };
 const openModalForEdit = (id) => {
   return {
